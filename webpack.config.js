@@ -10,6 +10,7 @@ var config = {
     path: OUTPUT,
     filename: "ttt.js"
   },
+  watch: true,
   module: {
     loaders: [{
       include: DEV,
