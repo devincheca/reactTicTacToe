@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
- 
+import Square from "./components/square.jsx";
 var HelloWorld = React.createClass({
   render: function() {
     return (
@@ -8,13 +8,13 @@ var HelloWorld = React.createClass({
     );
   }
 });
- 
 ReactDOM.render(
-  <div>
-    <HelloWorld greetTarget="Ban"/>
-    <HelloWorld greetTarget="Iran"/>
-    <HelloWorld greetTarget="Ni Cage"/>
-    <HelloWorld greetTarget="Mean"/>
+  <div className="w3-black w3-text-white w3-animate-opacity">
+    <Square></Square>
+    <HelloWorld greetTarget="Ba"/>
+    <HelloWorld greetTarget="Ian"/>
+    <HelloWorld greetTarget="Cage"/>
+    <HelloWorld greetTarget="Ean"/>
     <HelloWorld greetTarget="Bo"/>
     <HelloWorld greetTarget="Can"/>
   </div>,
