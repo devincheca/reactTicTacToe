@@ -2,12 +2,10 @@ import React from "react";
 function Square (props)
 {
     return (
-      <div>
-        <button 
-          className="w3-col s4 w3-btn w3-ripple w3-white w3-hover-light-gray w3-border"
+      <div
+          className="w3-third w3-white w3-hover-light-gray w3-border w3-padding"
           onClick={props.onClick}>
           {props.value}
-        </button>
       </div>
     );
 }
