@@ -43,8 +43,9 @@ export default class Board extends Component
   {
     return (
       <Square
-        value={this.state.squares[i]}
+        value={ this.state.squares[i] }
         onPress={ () => this.handlePress(i) }
+        style={ this.state.squares[i] === '#' ? styles.squareBlank : styles.square }
       />
     );
   }
@@ -135,10 +136,22 @@ const styles = StyleSheet.create({
     color: '#FFFFFF',
     textAlign: 'left',
   },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
+  square: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#F5FCFF',
+    borderRadius: 4, 
+    borderWidth: 0.5, 
+    borderColor: '#000000',
   },
+  squareBlank: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#F5FCFF',
+    borderRadius: 4, 
+    borderWidth: 0.5, 
+    borderColor: '#000000',
+    color: 'white',
+  }
 });
 AppRegistry.registerComponent('Board', () => Board);

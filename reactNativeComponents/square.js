@@ -4,7 +4,6 @@ import {
   StyleSheet,
   Text,
   TouchableHighlight,
-  View,
 } from 'react-native';
 export default class Square extends Component
 {
@@ -13,7 +12,7 @@ export default class Square extends Component
       <TouchableHighlight 
         style={styles.square}
         onPress={this.props.onPress}>
-        <Text style={styles.welcome}>
+        <Text style={this.props.style}>
           {this.props.value}
         </Text>
       </TouchableHighlight>
@@ -29,10 +28,5 @@ const styles = StyleSheet.create({
     borderWidth: 0.5, 
     borderColor: '#000000',
   },
-  welcome: {
-    fontSize: 105,
-    textAlign: 'center',
-    margin: 10,
-  }
 });
 AppRegistry.registerComponent('Square', () => Square);
